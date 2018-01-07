@@ -24,7 +24,7 @@ public class RemoveLoop {
 		if (head == null || head.next == null) {
 			return null;
 		}
-		
+
 		while (fast != null && fast.next != null) {
 			slow = slow.next;
 			fast = fast.next.next;
@@ -33,16 +33,16 @@ public class RemoveLoop {
 				break;
 			}
 		}
-		
-		// if loop exists 
-		if(slow == fast) {
+
+		// if loop exists
+		if (slow == fast) {
 			slow = head;
-			while(slow.next != fast.next) {
+			while (slow.next != fast.next) {
 				slow = slow.next;
 				fast = fast.next;
 			}
 			/* since fast->next is the looping point */
-            fast.next = null; /* remove loop */
+			fast.next = null; /* remove loop */
 		}
 		return head;
 	}
@@ -57,17 +57,17 @@ public class RemoveLoop {
 
 	static void push(int data) {
 		Node new_node = new Node(data);
-//		new_node.next = head;
-//		head = new_node;
-		
-		if(head == null) {
+		// new_node.next = head;
+		// head = new_node;
+
+		if (head == null) {
 			head = new Node(data);
 			return;
 		}
-		
+
 		new_node.next = null;
 		Node tmp = head;
-		while(tmp.next != null) {
+		while (tmp.next != null) {
 			tmp = tmp.next;
 		}
 		tmp.next = new_node;
@@ -83,7 +83,7 @@ public class RemoveLoop {
 
 		// Creating a loop
 		head.next.next.next.next.next = head.next.next;
-		printAll(head);
+
 		System.out.println("Linked List after removing loop : ");
 		printAll(RemoveLoop.removeLoop(head));
 
