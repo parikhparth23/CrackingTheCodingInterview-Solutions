@@ -1,6 +1,6 @@
 package InterviewQuestions;
 
-public class MoveZeroesToEnd_Apple {
+public class MoveZeroesToEnd {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

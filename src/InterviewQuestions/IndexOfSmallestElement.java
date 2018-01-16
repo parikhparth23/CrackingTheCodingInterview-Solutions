@@ -1,6 +1,6 @@
 package InterviewQuestions;
 
-public class IndexOfSmallestElement_Ebates {
+public class IndexOfSmallestElement {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
