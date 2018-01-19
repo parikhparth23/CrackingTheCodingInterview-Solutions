@@ -39,9 +39,9 @@ public class StackOfPlatesPopAtIndex {
     }
 
     static void printStacks() {
-        for(Stack<Integer> stack : stacks) {
+        for (Stack<Integer> stack : stacks) {
             System.out.println("[Bottom]");
-            for(int item : stack) {
+            for (int item : stack) {
                 System.out.println(item + " ");
             }
             System.out.println("[Top]");
