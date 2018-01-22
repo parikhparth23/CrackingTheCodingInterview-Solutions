@@ -5,16 +5,16 @@ import java.util.Stack;
 public class SortStack {
 
     // Function return the sorted stack
-    static Stack<Integer> sortStack(Stack<Integer> inputStack) {
+    private static Stack<Integer> sortStack(Stack<Integer> inputStack) {
         Stack<Integer> tmpStack = new Stack<>();
 
-        while(!inputStack.isEmpty()) {
+        while (!inputStack.isEmpty()) {
             // pop out the first element
             int tmp = inputStack.pop();
 
             // while temporary stack is not empty and
             // top of stack is greater than temp
-            while(!tmpStack.isEmpty() && tmpStack.peek() > tmp) {
+            while (!tmpStack.isEmpty() && tmpStack.peek() > tmp) {
                 // pop from temporary stack and
                 // push it to the input stack
                 inputStack.push(tmpStack.pop());
@@ -36,12 +36,11 @@ public class SortStack {
         inputStack.add(23);
 
         // This is the temporary stack
-        Stack<Integer> tmpStack=sortStack(inputStack);
+        Stack<Integer> tmpStack = sortStack(inputStack);
         System.out.println("Sorted numbers are:");
 
-        while (!tmpStack.empty())
-        {
-            System.out.print(tmpStack.pop()+" ");
+        while (!tmpStack.empty()) {
+            System.out.print(tmpStack.pop() + " ");
         }
     }
 }
