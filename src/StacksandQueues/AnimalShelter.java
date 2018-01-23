@@ -10,15 +10,6 @@ public class AnimalShelter {
         Animal(String name) {
             this.name = name;
         }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getName() {
-            return this.name;
-        }
-
     }
 
     static class Dog extends Animal {
@@ -33,7 +24,7 @@ public class AnimalShelter {
         }
     }
 
-    static public class AnimalQueue {
+    static class AnimalQueue {
         LinkedList<Animal> queue = new LinkedList<Animal>();
 
         public void enqueue(Animal newAnimal) {
