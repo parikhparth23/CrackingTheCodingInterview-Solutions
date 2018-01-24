@@ -48,6 +48,8 @@ public class QueueViaStacks {
 
         System.out.println("Is empty: " + empty());
 
+        push(5);
+
         System.out.println("Removed from stack: " +pop());
 
         System.out.println("Is empty: " + empty());
